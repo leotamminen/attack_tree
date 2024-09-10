@@ -1,0 +1,43 @@
+graph TD
+    A[Gain Access to Email Account] --> B[Obtain Password]
+    A --> C[Bypass Authentication]
+    A --> D[Exploit Account Recovery]
+    
+    B --> E[Guessing P]
+    B --> F[Phishing P]
+    B --> G[Keylogging P]
+    B --> H[Password Database Breach P]
+    
+    C --> I[Session Hijacking P]
+    C --> J[Man-in-the-Middle Attack P]
+    
+    D --> K[Exploit Security Questions]
+    D --> L[Intercept Recovery Email/SMS]
+    
+    K --> M[Social Engineering P]
+    K --> N[Information Gathering from Social Media P]
+    
+    L --> O[SIM Swapping P]
+    L --> P[Compromise Recovery Email Account P]
+    
+    G --> Q[Install Keylogger P]
+    G --> R[Remote Access P]
+    
+    H --> S[Steal DB from Web P]
+    H --> T[Crack Hashed Passwords P]
+    
+    classDef possible fill:#d4edda,stroke:#28a745,stroke-width:2px;
+    classDef impossible fill:#f8d7da,stroke:#dc3545,stroke-width:2px;
+    classDef default fill:#fff,stroke:#333,stroke-width:1px;
+    
+    class E,F,G,H,I,J,M,N,O,P,Q,R,S,T possible;
+    
+    subgraph and1 [AND]
+    S
+    T
+    end
+    
+    subgraph or1 [OR]
+    Q
+    R
+    end
